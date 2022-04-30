@@ -1,24 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from "react"
+
+//filles 
+import Form from "./components/Form"
+
 
 function App() {
+  // const loadBlockChain = async () =>
+  // {
+  //   const web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
+  //   const accounts = await web3.eth.getAccounts();
+  //   console.log(accounts);
+  
+  // }
+
+  // useEffect(()=>
+  // {
+  //   loadBlockChain();
+
+  // }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className="containor w-screen h-screen flex justify-center items-center flex-col">
+     <div className="containorHeader w-75 h-50">
+       <h1 className='text-white text-4xl font-medium text-center p-10 md:text-5xl'>Block Chain To Do List App </h1>       
+     </div>
+     <div className="formContent p-6">
+       <Form />
+     </div>
+
+   </div>
   );
 }
 
